@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed Ashraf | Laravel Backend Developer</title>
+    <meta name="description"
+        content="Ahmed Ashraf is a Computer Science student and Laravel Backend Developer focused on PHP, Laravel, MySQL, and scalable web applications.">
+    <meta property="og:title" content="Ahmed Ashraf | Laravel Backend Developer">
+    <meta property="og:description"
+        content="Ahmed Ashraf is a Computer Science student and Laravel Backend Developer focused on PHP, Laravel, MySQL, and scalable web applications.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body class="dark-theme">
+    <div id="scroll-progress"></div>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Ahmed Ashraf</a>
+
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#journey" class="nav-link">Journey</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="https://github.com/ahmed121765" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
+                    class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                        </path>
+                    </svg>
+                </a>
+                <a href="https://linkedin.com/in/ahmed-ashraf-467a87422" target="_blank" rel="noopener noreferrer"
+                    aria-label="LinkedIn" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                </a>
+                <button id="theme-toggle" aria-label="Toggle dark/light mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <button id="mobile-menu-btn" aria-label="Menu">
+                    <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                    <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay">
+            <div class="mobile-nav-links">
+                <a href="#home" class="mobile-nav-link">Home</a>
+                <a href="#about" class="mobile-nav-link">About</a>
+                <a href="#skills" class="mobile-nav-link">Skills</a>
+                <a href="#projects" class="mobile-nav-link">Projects</a>
+                <a href="#journey" class="mobile-nav-link">Journey</a>
+                <a href="#education" class="mobile-nav-link">Education</a>
+                <a href="#contact" class="mobile-nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero section">
+            <div class="container hero-container">
+                <div class="hero-content reveal">
+                    <div class="badge">
+                        Computer Science Student &bull; Laravel Backend Developer
+                    </div>
+                    <h1>Hi, I'm <span class="accent-text">Ahmed Ashraf</span>.</h1>
+                    <h2 class="subtitle">Laravel Backend Developer</h2>
+                    <p class="hero-description">
+                        Motivated Computer Science student with a strong foundation in PHP, Laravel, MySQL, and
+                        Object-Oriented Programming. Passionate about backend development and building scalable web
+                        applications using Laravel.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Projects</a>
+                        <a href="#contact" class="btn btn-secondary">Let's Talk</a>
+                    </div>
+                </div>
+
+                <div class="hero-visual reveal reveal-delay">
+                    <div class="code-editor-card">
+                        <div class="editor-header">
+                            <div class="dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="tabs">
+                                <div class="tab active">developer.php</div>
+                                <div class="tab">routes/web.php</div>
+                            </div>
+                        </div>
+                        <div class="editor-body">
+                            <pre><code><span class="keyword">class</span> <span class="class-name">Developer</span>
+{
+    <span class="keyword">public</span> <span class="keyword">function</span> <span class="function">build</span>()
+    {
+        <span class="keyword">return</span> <span class="string">"Scalable Web Applications"</span>;
+    }
+}</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="tech-badges-floating">
+                        <span class="tech-badge animate-float-1">PHP</span>
+                        <span class="tech-badge animate-float-2">Laravel</span>
+                        <span class="tech-badge animate-float-3">MySQL</span>
+                        <span class="tech-badge animate-float-1">Livewire</span>
+                        <span class="tech-badge animate-float-2">Git</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title reveal">About Me</h2>
+                <div class="about-grid">
+                    <div class="about-text reveal">
+                        <p>Motivated third-year Computer Science student at Menoufia University with a strong foundation
+                            in PHP, Laravel, MySQL, and Object-Oriented Programming.</p>
+                        <p>Passionate about backend development, I have actively applied my learning to build robust
+                            Laravel web applications. I focus on creating clean, maintainable code using design patterns
+                            and industry standard architecture.</p>
+                        <ul class="about-highlights">
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="accent-icon">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg> MVC Architecture</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="accent-icon">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg> Repository Pattern</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="accent-icon">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg> RESTful APIs</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="accent-icon">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg> Authentication & Authorization</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="accent-icon">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg> Eloquent ORM</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="accent-icon">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg> Livewire</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="accent-icon">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg> Database Design</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="accent-icon">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg> Git/GitHub</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card reveal reveal-delay">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <div class="info-content">
+                                <span class="info-label">Location</span>
+                                <span class="info-value">Menoufia, Egypt</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                                </svg>
+                            </div>
+                            <div class="info-content">
+                                <span class="info-label">University</span>
+                                <span class="info-value">Menoufia University</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                </svg>
+                            </div>
+                            <div class="info-content">
+                                <span class="info-label">Degree</span>
+                                <span class="info-value">Bachelor of Computer Science</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                            </div>
+                            <div class="info-content">
+                                <span class="info-label">Status</span>
+                                <span class="info-value">Third-Year Student</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                                </svg>
+                            </div>
+                            <div class="info-content">
+                                <span class="info-label">Expected Graduation</span>
+                                <span class="info-value">2028</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title reveal">Technical Skills</h2>
+                <div class="skills-grid">
+
+                    <div class="skill-category reveal">
+                        <div class="category-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                            <h3>Programming Languages</h3>
+                        </div>
+                        <div class="badges-container">
+                            <span class="skill-badge">PHP</span>
+                            <span class="skill-badge">JavaScript</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category reveal">
+                        <div class="category-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                                <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                                <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                            </svg>
+                            <h3>Backend</h3>
+                        </div>
+                        <div class="badges-container">
+                            <span class="skill-badge">Laravel</span>
+                            <span class="skill-badge">PHP OOP</span>
+                            <span class="skill-badge">MVC Architecture</span>
+                            <span class="skill-badge">Repository Pattern</span>
+                            <span class="skill-badge">RESTful APIs</span>
+                            <span class="skill-badge">Authentication & Authorization</span>
+                            <span class="skill-badge">Eloquent ORM</span>
+                            <span class="skill-badge">Blade</span>
+                            <span class="skill-badge">Livewire</span>
+                            <span class="skill-badge">Middleware</span>
+                            <span class="skill-badge">Validation</span>
+                            <span class="skill-badge">File Uploads</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category reveal">
+                        <div class="category-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                            </svg>
+                            <h3>Database</h3>
+                        </div>
+                        <div class="badges-container">
+                            <span class="skill-badge">MySQL</span>
+                            <span class="skill-badge">Database Design</span>
+                            <span class="skill-badge">CRUD Operations</span>
+                            <span class="skill-badge">Relationships</span>
+                            <span class="skill-badge">Migrations</span>
+                            <span class="skill-badge">Seeders</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category reveal">
+                        <div class="category-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                            <h3>Frontend</h3>
+                        </div>
+                        <div class="badges-container">
+                            <span class="skill-badge">HTML5</span>
+                            <span class="skill-badge">CSS3</span>
+                            <span class="skill-badge">Bootstrap</span>
+                            <span class="skill-badge">JavaScript</span>
+                            <span class="skill-badge">jQuery</span>
+                            <span class="skill-badge">Responsive Web Design</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category reveal">
+                        <div class="category-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                                </path>
+                            </svg>
+                            <h3>Tools</h3>
+                        </div>
+                        <div class="badges-container">
+                            <span class="skill-badge">Git</span>
+                            <span class="skill-badge">GitHub</span>
+                            <span class="skill-badge">Composer</span>
+                            <span class="skill-badge">Vite</span>
+                            <span class="skill-badge">VS Code</span>
+                            <span class="skill-badge">MySQL Workbench</span>
+                            <span class="skill-badge">phpMyAdmin</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title reveal">Featured Projects</h2>
+
+                <!-- Project 01 (Featured) -->
+                <div class="project-card featured reveal">
+                    <div class="project-visual mockup-hospital">
+                        <div class="mockup-header">
+                            <div class="mockup-title">Hospital Dashboard</div>
+                            <div class="mockup-user"></div>
+                        </div>
+                        <div class="mockup-sidebar"></div>
+                        <div class="mockup-content">
+                            <div class="mockup-stats">
+                                <div class="stat-box">Patients</div>
+                                <div class="stat-box">Doctors</div>
+                                <div class="stat-box">Appointments</div>
+                                <div class="stat-box">Billing</div>
+                            </div>
+                            <div class="mockup-table">
+                                <div class="table-row head"></div>
+                                <div class="table-row"></div>
+                                <div class="table-row"></div>
+                                <div class="table-row"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-num">01</div>
+                        <h3 class="project-title">Hospital Management System</h3>
+                        <p class="project-desc">Developed a scalable hospital management system using Laravel and
+                            Livewire.</p>
+                        <div class="project-tech">
+                            <span>Laravel</span>
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                            <span>Livewire</span>
+                            <span>Tailwind CSS</span>
+                            <span>Vite</span>
+                        </div>
+                        <div class="project-links">
+                            <button class="btn btn-primary view-project-btn" data-project="1">View Project</button>
+                            <a href="#" class="btn btn-icon" aria-label="GitHub Repository"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                    </path>
+                                </svg> GitHub Repository</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 02 -->
+                    <div class="project-card reveal">
+                        <div class="project-visual mockup-school">
+                            <div class="mockup-header">
+                                <div class="mockup-title">School Portal</div>
+                            </div>
+                            <div class="mockup-grid">
+                                <div class="grid-item">Students</div>
+                                <div class="grid-item">Teachers</div>
+                                <div class="grid-item">Classes</div>
+                                <div class="grid-item">Attendance</div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-num">02</div>
+                            <h3 class="project-title">School Management System</h3>
+                            <p class="project-desc">Developed a comprehensive school management system for students,
+                                teachers, parents, classrooms, attendance, examinations, grades, fees, events, and
+                                online classes.</p>
+                            <div class="project-tech">
+                                <span>Laravel</span>
+                                <span>PHP</span>
+                                <span>MySQL</span>
+                                <span>Livewire</span>
+                                <span>Bootstrap</span>
+                            </div>
+                            <div class="project-links">
+                                <button class="btn btn-primary view-project-btn" data-project="2">View Project</button>
+                                <a href="#" class="btn btn-icon" aria-label="GitHub Repository"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 03 -->
+                    <div class="project-card reveal">
+                        <div class="project-visual mockup-invoice">
+                            <div class="mockup-header">
+                                <div class="mockup-title">Invoice System</div>
+                            </div>
+                            <div class="mockup-list">
+                                <div class="list-item">Customers</div>
+                                <div class="list-item">Invoices</div>
+                                <div class="list-item">Payments</div>
+                                <div class="list-item status">Status</div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-num">03</div>
+                            <h3 class="project-title">Invoice Management System</h3>
+                            <p class="project-desc">Built an invoice management system featuring customer management and
+                                invoice generation.</p>
+                            <div class="project-tech">
+                                <span>Laravel</span>
+                                <span>PHP</span>
+                                <span>MySQL</span>
+                            </div>
+                            <div class="project-links">
+                                <button class="btn btn-primary view-project-btn" data-project="3">View Project</button>
+                                <a href="#" class="btn btn-icon" aria-label="GitHub Repository"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 04 -->
+                    <div class="project-card reveal">
+                        <div class="project-visual mockup-ecommerce">
+                            <div class="mockup-header">
+                                <div class="mockup-title">E-Commerce</div>
+                            </div>
+                            <div class="mockup-ecommerce-grid">
+                                <div class="grid-card">Products</div>
+                                <div class="grid-card">Cart</div>
+                                <div class="grid-card">Orders</div>
+                                <div class="grid-card highlight">Admin Panel</div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-num">04</div>
+                            <h3 class="project-title">Integrated E-Commerce Platform</h3>
+                            <p class="project-desc">A comprehensive e-commerce application with a user interface for
+                                browsing, shopping cart, and a full admin dashboard.</p>
+                            <div class="project-tech">
+                                <span>Laravel</span>
+                                <span>Blade</span>
+                                <span>Tailwind CSS</span>
+                                <span>Vite</span>
+                            </div>
+                            <div class="project-links">
+                                <button class="btn btn-primary view-project-btn" data-project="4">View Project</button>
+                                <a href="https://github.com/ahmed121765/E-Commerce" target="_blank"
+                                    rel="noopener noreferrer" class="btn btn-icon" aria-label="GitHub Repository"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Modal -->
+        <div id="project-modal" class="modal">
+            <div class="modal-content">
+                <button class="close-modal" aria-label="Close modal">&times;</button>
+                <div class="modal-body">
+                    <h3 id="modal-title">Project Title</h3>
+                    <p id="modal-desc" class="modal-desc">Project description goes here.</p>
+
+                    <div class="modal-section">
+                        <h4>Technologies</h4>
+                        <div id="modal-tech" class="badges-container">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+
+                    <div class="modal-section">
+                        <h4>Features</h4>
+                        <ul id="modal-features" class="modal-list">
+                            <!-- Populated by JS -->
+                        </ul>
+                    </div>
+
+                    <div class="modal-section" id="modal-architecture-section">
+                        <h4>Architecture</h4>
+                        <ul id="modal-architecture" class="modal-list">
+                            <!-- Populated by JS -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="journey" class="section">
+            <div class="container">
+                <h2 class="section-title reveal">Learning Journey</h2>
+
+                <div class="timeline">
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">University Foundation</h3>
+                            <p class="timeline-meta">Computer Science • Menoufia University • 2024 - 2028</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Core Programming</h3>
+                            <div class="path-badges">
+                                <span>PHP</span> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                                <span>Object-Oriented Programming</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Data Management</h3>
+                            <div class="path-badges">
+                                <span>MySQL</span> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                                <span>Database Design</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Advanced Framework</h3>
+                            <div class="path-badges">
+                                <span>Laravel</span> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                                <span>MVC Architecture</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Enterprise Patterns</h3>
+                            <div class="path-badges">
+                                <span>Repository Pattern</span> <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                                <span>RESTful APIs</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Modern Ecosystem</h3>
+                            <div class="path-badges">
+                                <span>Livewire</span> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                                <span>Git & GitHub</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <div class="container">
+                <h2 class="section-title reveal">Education</h2>
+
+                <div class="education-card reveal">
+                    <div class="edu-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                        </svg>
+                    </div>
+                    <div class="edu-content">
+                        <h3 class="edu-degree">Bachelor of Computer Science</h3>
+                        <div class="edu-institution">Faculty of Computers and Information • Menoufia University</div>
+                        <div class="edu-meta">
+                            <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg> Menoufia, Egypt</span>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg> Expected Graduation: 2028</span>
+                        </div>
+                        <div class="edu-status">Third-Year Student</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills-soft" class="section">
+            <div class="container">
+                <div class="split-section">
+                    <div class="split-col">
+                        <h2 class="section-title reveal">Soft Skills</h2>
+                        <div class="soft-skills-grid">
+                            <div class="soft-skill-card reveal">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                                </svg>
+                                <span>Problem Solving</span>
+                            </div>
+                            <div class="soft-skill-card reveal">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                    <polyline points="2 17 12 22 22 17"></polyline>
+                                    <polyline points="2 12 12 17 22 12"></polyline>
+                                </svg>
+                                <span>Analytical Thinking</span>
+                            </div>
+                            <div class="soft-skill-card reveal">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                                <span>Communication</span>
+                            </div>
+                            <div class="soft-skill-card reveal">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                                <span>Teamwork</span>
+                            </div>
+                            <div class="soft-skill-card reveal">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+                                    <polyline points="13 2 13 9 20 9"></polyline>
+                                    <path d="M10.9 14.9L9 13l2.9-2.9"></path>
+                                    <path d="M16 11l-4 4-1.9-1.9"></path>
+                                </svg>
+                                <span>Fast Learner</span>
+                            </div>
+                            <div class="soft-skill-card reveal">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                                <span>Time Management</span>
+                            </div>
+                            <div class="soft-skill-card reveal">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                </svg>
+                                <span>Attention to Detail</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="split-col">
+                        <h2 class="section-title reveal">Languages</h2>
+                        <div class="languages-grid">
+                            <div class="language-card reveal">
+                                <h3>Arabic</h3>
+                                <span>Native</span>
+                            </div>
+                            <div class="language-card reveal">
+                                <h3>English</h3>
+                                <span>Good</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="contact-wrapper reveal">
+                    <div class="contact-info">
+                        <h2 class="section-title">Let's Build Something Together</h2>
+                        <p class="contact-desc">Have a project idea, internship opportunity, or just want to connect?
+                            Feel free to reach out.</p>
+
+                        <div class="contact-methods">
+                            <a href="mailto:ashraf14015320@gmail.com" class="contact-method">
+                                <div class="contact-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                        </path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                </div>
+                                <span>ashraf14015320@gmail.com</span>
+                            </a>
+                            <a href="https://github.com/ahmed121765" target="_blank" rel="noopener noreferrer"
+                                class="contact-method">
+                                <div class="contact-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <span>github.com/ahmed121765</span>
+                            </a>
+                            <a href="https://linkedin.com/in/ahmed-ashraf-467a87422" target="_blank"
+                                rel="noopener noreferrer" class="contact-method">
+                                <div class="contact-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                        </path>
+                                        <rect x="2" y="9" width="4" height="12"></rect>
+                                        <circle cx="4" cy="4" r="2"></circle>
+                                    </svg>
+                                </div>
+                                <span>linkedin.com/in/ahmed-ashraf-467a87422</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                                <span class="error-msg" id="name-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                                <span class="error-msg" id="email-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required>
+                                <span class="error-msg" id="subject-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                                <span class="error-msg" id="message-error"></span>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                            <div id="form-success" class="form-success hidden">
+                                Your message has been validated successfully. Please use the email address above to
+                                contact Ahmed.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-info">
+                <h3>Ahmed Ashraf</h3>
+                <p>Laravel Backend Developer<br>Computer Science Student</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <div class="footer-nav">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+
+            <div class="footer-social">
+                <h4>Social</h4>
+                <div class="footer-social-icons">
+                    <a href="https://github.com/ahmed121765" target="_blank" rel="noopener noreferrer"
+                        aria-label="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/ahmed-ashraf-467a87422" target="_blank" rel="noopener noreferrer"
+                        aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="mailto:ashraf14015320@gmail.com" aria-label="Email">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Ahmed Ashraf. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button id="back-to-top" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+    </button>
+</body>
+
+</html>
